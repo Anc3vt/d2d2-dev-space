@@ -18,8 +18,8 @@ public class TestApplication1 implements Application {
 
 
     @Override
-    public void start(ApplicationContext appCtx) {
+    public void start(ApplicationContext applicationContext) {
 
-        appCtx.stage().addChild(new FpsMeter());
+        applicationContext.stage().addChild(new FpsMeter());
     }
 }

@@ -25,8 +25,8 @@ public class TextureAtlasDevApplication implements Application {
     }
 
     @Override
-    public void start(ApplicationContext appCtx) {
-        Stage stage = appCtx.stage();
+    public void start(ApplicationContext applicationContext) {
+        Stage stage = applicationContext.stage();
 
         D2D2.log.setLevel(Log.DEBUG);
 

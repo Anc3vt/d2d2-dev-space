@@ -18,7 +18,7 @@ public class TestBitmapGalaxyV2 implements Application {
     }
 
     @Override
-    public void start(ApplicationContext appCtx) {
+    public void start(ApplicationContext applicationContext) {
         final int width = 400, height = 400;
         final int cx = width / 2, cy = height / 2;
 
@@ -44,7 +44,7 @@ public class TestBitmapGalaxyV2 implements Application {
             particles.add(new Particle(angle, radius, angVel, hsv[0], hsv[1], hsv[2], hueShift, pulse));
         }
 
-        appCtx.stage().onTick(e -> {
+        applicationContext.stage().onTick(e -> {
             bitmap.clear();
 
             float t = (System.currentTimeMillis() % 100000) / 1000f;
@@ -84,8 +84,8 @@ public class TestBitmapGalaxyV2 implements Application {
             }
         });
 
-        appCtx.stage().addChild(bitmap);
-        appCtx.stage().addChild(new FpsMeter());
+        applicationContext.stage().addChild(bitmap);
+        applicationContext.stage().addChild(new FpsMeter());
     }
 
     public static class Particle {

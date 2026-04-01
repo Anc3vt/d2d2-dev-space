@@ -26,7 +26,7 @@ public class PrettyEventDemoApplication implements Application {
     private final Random random = new Random();
 
     @Override
-    public void start(ApplicationContext context) {
+    public void start(ApplicationContext applicationContext) {
         Stage stage = D2D2_legacy.getStage();
 
         stage.setBackgroundColor(Color.of(0x0F1226));

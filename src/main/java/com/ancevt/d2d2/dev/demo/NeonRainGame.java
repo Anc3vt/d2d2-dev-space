@@ -53,7 +53,7 @@ public class NeonRainGame implements Application {
     private float timeSeconds;
 
     @Override
-    public void start(ApplicationContext context) {
+    public void start(ApplicationContext applicationContext) {
         stage = D2D2_legacy.getStage();
         stage.setBackgroundColor(Color.of(0x0B1020));
 

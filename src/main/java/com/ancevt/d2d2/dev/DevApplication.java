@@ -21,8 +21,8 @@ public class DevApplication implements Application {
 
 
     @Override
-    public void start(ApplicationContext appCtx) {
-        Stage stage = appCtx.stage();
+    public void start(ApplicationContext applicationContext) {
+        Stage stage = applicationContext.stage();
 
         stage.addChild(new FpsMeter());
     }
