@@ -10,6 +10,7 @@ import com.ancevt.d2d2.scene.BasicSprite;
 import com.ancevt.d2d2.scene.Sprite;
 import com.ancevt.d2d2.scene.Stage;
 import com.ancevt.d2d2.scene.texture.TextureAtlas;
+import com.ancevt.d2d2.scene.texture.TextureAtlasBuilder;
 
 public class TextureAtlasDevApplication implements Application {
 
@@ -29,8 +30,7 @@ public class TextureAtlasDevApplication implements Application {
 
         D2D2.log.setLevel(Log.DEBUG);
 
-        TextureAtlas textureAtlas = D2D2.textureManager()
-                .createTextureAtlas()
+        TextureAtlas textureAtlas = new TextureAtlasBuilder()
                 .addFromAsset("sq-tiger", "sq-tiger.png")
                 .addFromAsset("heart", "heart.png")
                 .build();
