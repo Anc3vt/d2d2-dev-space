@@ -24,11 +24,10 @@ import com.ancevt.d2d2.D2D2;
 import com.ancevt.d2d2.debug.FpsMeter;
 import com.ancevt.d2d2.lifecycle.Application;
 import com.ancevt.d2d2.log.Log;
-import com.ancevt.d2d2.scene.BasicSprite;
-import com.ancevt.d2d2.scene.Sprite;
 import com.ancevt.d2d2.scene.Stage;
-import com.ancevt.d2d2.scene.texture.TextureAtlas;
-import com.ancevt.d2d2.scene.texture.TextureAtlasBuilder;
+import com.ancevt.d2d2.scene.text.BitmapFont;
+import com.ancevt.d2d2.scene.text.BitmapFontBuilder;
+import com.ancevt.d2d2.scene.text.BitmapText;
 
 public class TextureAtlasDevApplication implements Application {
 
@@ -48,15 +47,15 @@ public class TextureAtlasDevApplication implements Application {
 
         D2D2.log.setLevel(Log.DEBUG);
 
-        TextureAtlas textureAtlas = new TextureAtlasBuilder()
-                .addFromAsset("sq-tiger", "sq-tiger.png")
-                .addFromAsset("heart", "heart.png")
+
+        BitmapFont f2 = new BitmapFontBuilder()
+                .assetPath("PressStart2P-Regular.ttf")
+                .fontSize(32)
                 .build();
+        BitmapText bitmapText = new BitmapText(f2);
+        bitmapText.setText("123123 ");
+        stage.addChild(bitmapText, 200, 200);
 
-        Sprite sprite = new BasicSprite(textureAtlas.getTextureRegion("heart"));
-        stage.addChild(sprite);
-
-        sprite.setScale(4f);
 
         stage.addChild(new FpsMeter());
     }
